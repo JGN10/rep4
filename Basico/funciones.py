@@ -1,5 +1,5 @@
 # funcion maximo de dos números
-from operator import truediv
+#from operator import truediv
 
 
 def max(x,y):
