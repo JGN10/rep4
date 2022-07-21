@@ -6,10 +6,10 @@ def inversa(x):
     for i in range(len(x)-1,-1,-1):
         a += x[i]
     return a 
+# otra opcion    print(x[::-1])
 
-def es_palindromo(x,y):
-    x = inversa(x)
-    print(y)
+def es_palindromo(x):
+    y = inversa(x)
     if x==y:
         return True
     else:
@@ -17,17 +17,15 @@ def es_palindromo(x,y):
 
 
 
-def es_palindromo2(x,y):
-    longitud = len(x)
-    if longitud == len(y):
-        for i in range(longitud):
-            if x[i] != y[longitud - 1 -i ]:
-                print(i)
-                return False
-        return True
-    else:
-        return False
-        
+def es_palindromo2(x):
+    for i in range((len(x) // 2)+1):
+        if x[i] != x[len(x) - 1 -i ]:
+            print(i)
+            return False
+    return True
+
+
+
 def superposicion(x,y):
     encontrado = False
     for i in x:

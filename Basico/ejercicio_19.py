@@ -35,11 +35,14 @@ while True:
                     print('Algún error se ha producido ')
             elif ejercicio == 2:
                 valor1 = input('introduce la primera cadena a comparar ')
-                valor2 = input('introduce la segunda cadena a comparar ')
-                
-                result = es_palindromo(valor1, valor2)
+                                
+                result = es_palindromo(valor1)
                 if result :
-                    print (f'las cadenas pasadas son palíndromos')
+                    print (f'las cadena pasada son palíndromos')
+                else:
+                    print ('Las cadenas pasadas NO son palíndromos')
+                    
+                        
             elif ejercicio == 3:
                 valor1 = input('introduce la primera lista ')
                 if valor1[0]=="[" or valor1[0]=="(":
