@@ -1,22 +1,33 @@
 from funciones import *
+'''import os
+import sys
 
+script_dir = os.path.dirname( __file__ )
+mymodule_dir = os.path.join( script_dir, '..', 'basico')
+print(mymodule_dir)
+sys.path.append( mymodule_dir )
+
+import Ejercicios_18_Repaso
+
+Ejercicios_18_Repaso.suma([2, 3])
+'''
 while True:
     try:
         print('\n')
         ejercicio = int(input('introduce el número del ejercicio que quieres ejecutar (0 para finalizar) '))
         if ejercicio in [1, 2, 3, 4, 5]:
             if ejercicio == 1:
-                valor1 = input('introduce el primer número a comparar ')
-                valor2 = input('introduce el segundo número a comparar ')
-                result = max(valor1, valor2)
+                valor1 =int(input('introduce el primer número a comparar '))
+                valor2 = int(input('introduce el segundo número a comparar '))
+                result = maximo(valor1, valor2)
                 if result != None:
                     print (f'el valor mayor es {result} ')
                 else:
                     print('los valores introducidos no son correctos ')
             elif ejercicio == 2:
-                valor1 = input('introduce el primer número a comparar ')
-                valor2 = input('introduce el segundo número a comparar ')
-                valor3 = input('introduce el tercer número a comparar ')
+                valor1 = int(input('introduce el primer número a comparar '))
+                valor2 = int(input('introduce el segundo número a comparar '))
+                valor3 = int(input('introduce el tercer número a comparar '))
                 result = max_de_tres(valor1, valor2, valor3)
                 if result != None:
                     print (f'el valor mayor es {result} ')
@@ -52,6 +63,7 @@ while True:
         elif ejercicio == 0:
             break
     except Exception:
+        print('error al introducir los datos')
         break        
     
 

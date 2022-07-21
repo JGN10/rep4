@@ -2,7 +2,8 @@
 #from operator import truediv
 
 
-def max(x,y):
+def maximo(x,y):
+    
     if x > y:
         return (x)
     elif x < y:
@@ -13,9 +14,12 @@ def max(x,y):
 
 
 def max_de_tres(x,y,z):
-    max1 = max(x,y)
+    max1 = maximo(x,y)
     if max1 != None:
-        return (max(max1,z))    
+        return (maximo(max1,z))
+    else:
+        return None
+
 
 
 
@@ -59,4 +63,4 @@ def mult_lista(x):
         return mult
     except Exception:
         return None
-print(mult_lista([1,2,3,4]))
+#print(mult_lista([1,2,3,4]))
