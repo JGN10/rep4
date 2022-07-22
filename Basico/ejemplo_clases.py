@@ -1,4 +1,14 @@
-from cgi import print_arguments
+import os
+import sys
+
+script_dir = os.path.dirname( __file__ )
+print(script_dir)
+mymodule_dir = os.path.join( script_dir, '..', 'clases')
+print(mymodule_dir)
+sys.path.append( mymodule_dir )
+print (sys.path)
+
+#from cgi import print_arguments
 from clase1 import *
 print('dentro de clase ')
 var_global = 'valor definido en el fichero clase'

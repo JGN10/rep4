@@ -1,16 +1,17 @@
-from funciones import *
-'''import os
+
+import os
 import sys
 
 script_dir = os.path.dirname( __file__ )
-mymodule_dir = os.path.join( script_dir, '..', 'basico')
+mymodule_dir = os.path.join( script_dir, '..', 'funciones')
 print(mymodule_dir)
 sys.path.append( mymodule_dir )
 
-import Ejercicios_18_Repaso
+#import Ejercicios_18_Repaso
+from funciones import *
 
-Ejercicios_18_Repaso.suma([2, 3])
-'''
+#Ejercicios_18_Repaso.suma([2, 3])
+
 while True:
     try:
         print('\n')
