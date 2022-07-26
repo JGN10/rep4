@@ -61,6 +61,17 @@ def c_mayusculas(cadena):
 #print(m)
 #print(c)
 
+def mayores(x):
+    contador = 0
+    for i in x:
+        if i > 20:
+            contador += 1
+    print(f'El número de personas con más de 20 años es {contador}')
+
+
+
+
+
 def main():
     try:
         nombres = []

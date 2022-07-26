@@ -58,7 +58,9 @@ while True:
                 mayusculas, cad_aux = c_mayusculas(valor1)
                 print(f'la mayúsculas que se tienen en la cadena son {mayusculas} y aparecen {cad_aux} ')
             elif ejercicio == 6:    
-                pass
+                valor1 = ''
+                valor1 = (1,2,3,4,50,60,70,8,9,10)
+                mayores(valor1)
             elif ejercicio == 7:    
                 nombres_buscados,cuantos = main()
             elif ejercicio == 8:
