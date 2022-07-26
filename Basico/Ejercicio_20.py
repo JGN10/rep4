@@ -1,3 +1,81 @@
+import os
+import sys
+
+script_dir = os.path.dirname( __file__ )
+#print(script_dir)
+mymodule_dir = os.path.join( script_dir, '..', 'funciones')
+#print(mymodule_dir)
+sys.path.append( mymodule_dir )
+#print (sys.path)
+from funciones_20 import *
+
+while True:
+    try:
+        print('\n')
+        ejercicio = int(input('introduce el número del ejercicio que quieres ejecutar (0 para finalizar) '))
+        if ejercicio in [1, 2, 3, 4, 5, 6, 7, 8]:
+            if ejercicio == 1:
+                caracter = input('introduce el caracter a duplicar  ')
+                veces = int(input('introduce el número de veces que quieres duplicar el caracter'))
+                result = generar_n_caracteres(veces, caracter)
+                if result != None:
+                    print (f'La cadena repetida es: {result} ')
+                else:
+                    print('Algún error se ha producido ')
+
+            elif ejercicio == 2:
+                valor1 = input('introduce la lista ')
+                if valor1[0]=="[" or valor1[0]=="(":
+                    valor1 = eval(valor1)
+                    procedimiento(valor1)
+                else:
+                    print('El valor introducido no es una lista')
+        
+            elif ejercicio == 3:
+                valor1=[]
+                valor1 = input('introduce la lista de palabras ')
+             
+                if valor1[0]=="[" or valor1[0]=="(":
+                    valor1 = eval(valor1)
+                  
+                    palabra,longitud = mas_larga(valor1)
+               
+                    print(f'la palabras que tienen mayor longitud son {palabra} y la longitud es  {longitud} ')
+                else:
+                    print('El valor introducido no es una lista') 
+            elif ejercicio == 4:
+                valor1 = []
+                valor1 = input('introduce la lista a comparar   ')
+                veces = int(input('introduce el número de caracteres que quieres comparar'))
+                if valor1[0]=="[" or valor1[0]=="(":
+                    valor1 = eval(valor1)
+                    lista_aux=filtrar_palabras(valor1, veces)
+                    print(f'Las palabrass con más de {veces} caracteres son {lista_aux}')
+                else:
+                    print('El valor introducido no es una lista') 
+            elif ejercicio == 5:    
+                valor1 = input('introduce la cadena a comparar   ')
+                mayusculas, cad_aux = c_mayusculas(valor1)
+                print(f'la mayúsculas que se tienen en la cadena son {mayusculas} y aparecen {cad_aux} ')
+            elif ejercicio == 6:    
+                pass
+            elif ejercicio == 7:    
+                nombres_buscados,cuantos = main()
+            elif ejercicio == 8:
+                contar_vocales()
+        elif ejercicio == 0:
+            break
+    except Exception:
+        print('error al introducir los datos')
+        break        
+    
+
+
+
+
+
+
+
 """
     Basándote en la teoría explicada en clase sobre Python
     realiza los siguientes ejercicios

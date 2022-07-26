@@ -2,12 +2,15 @@
 #import pandas as pd
 
 def generar_n_caracteres(n, caracter):
-    salida = ""
-    salida = caracter * n
-    #for i in range(n):
-    #    salida += caracter
-    return (salida)
-    #print(f'salida  {salida}')
+    try:
+        salida = ""
+        salida = caracter * n
+        #for i in range(n):
+        #    salida += caracter
+        return (salida)
+        #print(f'salida  {salida}')
+    except Exception:
+        return None
 
 
 
@@ -40,9 +43,10 @@ def filtrar_palabras(lista, n):
     for i in lista:
         if len(i) >= n:
             lista_aux.append(i)
+    return lista_aux
     print(lista_aux) 
 
-filtrar_palabras(['123','22','222','4444'], 4)
+#filtrar_palabras(['123','22','222','4444'], 4)
 
 def c_mayusculas(cadena):
     mayusculas = 0
@@ -58,18 +62,22 @@ def c_mayusculas(cadena):
 #print(c)
 
 def main():
-    nombres = []
-    nombres_buscados = []
-    numero = int(input('introduce el número de nombres a introducir '))
-    letra = input('introduce la letra por la cual comparar ')
-    cuantos = 0
-    for i in range(numero):
-        nombres.append(input(f'introduce el nombre {i+1}'))
-    for j in nombres:
-        if j.startswith(letra):
-            nombres_buscados.append(j)
-            cuantos += 1
-    return nombres_buscados,cuantos
+    try:
+        nombres = []
+        nombres_buscados = []
+        numero = int(input('introduce el número de nombres a introducir '))
+        letra = input('introduce la letra por la cual comparar ')
+        cuantos = 0
+        for i in range(numero):
+            nombres.append(input(f'introduce el nombre {i+1} '))
+        for j in nombres:
+            if j.startswith(letra):
+                nombres_buscados.append(j)
+                cuantos += 1
+        print(f'la lista de nombres encontrados que comienzan por {letra} son {nombres_buscados}')
+        return nombres_buscados,cuantos
+    except Exception:
+        return None
 
 #n,c = main()
 #print(n)
