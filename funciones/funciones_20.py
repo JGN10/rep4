@@ -85,7 +85,7 @@ def main():
             if j.startswith(letra):
                 nombres_buscados.append(j)
                 cuantos += 1
-        print(f'la lista de nombres encontrados que comienzan por {letra} son {nombres_buscados}')
+        print(f'la lista de nombres encontrados que comienzan por {letra} son {cuantos} y los nombres son {nombres_buscados}')
         return nombres_buscados,cuantos
     except Exception:
         return None
