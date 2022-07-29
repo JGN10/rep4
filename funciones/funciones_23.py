@@ -15,7 +15,7 @@
    A continuación muestra la edad del alumno 2 y el alumno 3 y sus notas
 """
 from matplotlib.cbook import print_cycles
-
+import pandas as pd
 
 class Alumnos:
     
@@ -201,7 +201,7 @@ def parte_entera():
 
 def leer_datos_csv():
     import pandas as pd
-    datos = pd.read_csv("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8.csv", sep=';' )
+    datos = pd.read_csv("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8.csv", sep='#' )
     print(datos.head())
 
 #leer_datos_csv()
@@ -225,14 +225,38 @@ def imprime_balance(lista,df_meses):
     print(f'El balance total para los meses indicados es: {balance_total}')
 
 
-def carga_df():
-    import pandas as pd
-    datos = pd.read_csv("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8.csv", sep=';' )
+def carga_df(ruta):
+    #import pandas as pd
+    datos = pd.read_csv(ruta, sep=';' )
+    print('dentro de la carga')
     return datos
 
+def calcula_balance(ventas):
+    list_balance = []
+    for j in range(len(ventas)): #   ventas.index:
+        venta = int(ventas.loc[j,"Ventas"])
+        gastos = int(ventas.loc[j,"Gastos"])
+        balance = venta - gastos
+        list_balance.append(balance)
+    ventas["Balance"]=list_balance
+    return ventas
+
+
+
 #lista_meses=['Enero','Marzo','Abril']
-#ventas = carga_df()
+ventas = carga_df("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8.csv")
 #imprime_balance(lista_meses,ventas)
+ventas_2 = calcula_balance(ventas)
+ventas_2.to_csv("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8_mod.csv", sep=';', index = False )
+balance= carga_df("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8_mod.csv")
+print(balance.head())
+
+
+    
+
+
+
+
 
 # Ejercicio 10
 
