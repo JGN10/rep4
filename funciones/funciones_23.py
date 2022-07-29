@@ -199,12 +199,12 @@ def parte_entera():
     Abril 33900 20700
 """
 
-def leer_datos_csv():
+def leer_datos_csv(ruta):
     import pandas as pd
-    datos = pd.read_csv("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8.csv", sep='#' )
+    datos = pd.read_csv(ruta, sep='99' )
     print(datos.head())
 
-#leer_datos_csv()
+leer_datos_csv("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8_xxc.xxc")
 
 # Ejercicio 9
 
@@ -244,12 +244,12 @@ def calcula_balance(ventas):
 
 
 #lista_meses=['Enero','Marzo','Abril']
-ventas = carga_df("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8.csv")
+#ventas = carga_df("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8.csv")
 #imprime_balance(lista_meses,ventas)
-ventas_2 = calcula_balance(ventas)
-ventas_2.to_csv("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8_mod.csv", sep=';', index = False )
-balance= carga_df("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8_mod.csv")
-print(balance.head())
+#ventas_2 = calcula_balance(ventas)
+#ventas_2.to_csv("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8_mod.csv", sep=';', index = False )
+#balance= carga_df("C:/jero/Curso Data Science2/repositorio/rep4/ejercicio_8_mod.csv")
+#print(balance.head())
 
 
     
