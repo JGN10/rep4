@@ -25,6 +25,8 @@ def multiplos_3():
     for i in range(1,numero+1):
         b.append(i*3)
     print(b)
+
+    # otra opcion es [*range(3, (3*multiplos)+1,3)]
     return a,b
 
 
@@ -42,6 +44,7 @@ def multiplos_3():
 """
 def ejercicio_2():
     valores = [10, 10, 20, 20, 20, 30, 40]
+    # otra forma df= pd.DataFrame({"valores": valores})
     df = pd.DataFrame()
     df["valores"]=valores
     print(df)
@@ -49,6 +52,7 @@ def ejercicio_2():
     print(f'Imprimimos value_counts.shape {df.valores.value_counts().shape}')
     print(f'Imprimimos value_counts.values {df.valores.value_counts().values}')
     repeticiones = list(df.valores.value_counts().values)
+    # otra forma es df.valores.value_counts().values.tolist()
     print(f'Imprimimos value_counts.index {df.valores.value_counts().index}')
     valores = list(df.valores.value_counts().index)
     df_values = pd.DataFrame()
@@ -57,7 +61,7 @@ def ejercicio_2():
     print(df.value_counts())
     print(df_values)
 
-#ejercicio_2()
+ejercicio_2()
 # 1) Crea un DataFrame con esa información e imprímelo
 
 
