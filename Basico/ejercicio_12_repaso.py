@@ -146,7 +146,7 @@ ejercicio_2()
     -5- recuerda el ejercicio del cronómetro para tener una referencia
 """
 matriz1 = np.array([[1,2],[3,4]])
-matriz2 = np.array([[1,2],[3,8]])
+matriz2 = np.array([[1,2],[4,3]])
 def compara_matrizes(m1,m2):
     f1,c1=m1.shape
     f2,c2=m2.shape
@@ -165,3 +165,5 @@ def compara_matrizes(m1,m2):
     return contador
 
 valor = compara_matrizes(matriz1,matriz2)
+
+print((matriz1==matriz2))
