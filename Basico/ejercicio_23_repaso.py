@@ -291,9 +291,7 @@ def imprime_balance(datos, paises):
     
 
     
-
-
-imprime_balance(datos1,['Febrero','Abril'])
+#imprime_balance(datos1,['Febrero','Abril'])
 
 
 #venta1 = datos1[datos1['meses']=='Enero'].Ventas - datos1[datos1['meses']=='Enero'].Gastos
@@ -345,6 +343,22 @@ def balance2(contabilidad, meses):
     y después las muestre por pantalla con el mensaje "Has sacado ASIGNATURA la nota de NOTA"
     donde es cada una de las asignaturas de la lista y cada una de las correspondientes notas introducidas por el usuario.
 """
+def asignaturas():
+    materias = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+    notas=[]
+    for i in materias:
+        nota = input(f'Introduce la nota de la asignatura {i}: ')
+        notas.append(nota)
+    contador = 0
+    for i in materias:
+        print(f'La nota para la asignatura {i} es {notas[contador]}')
+        contador += 1
+    
+asignaturas()
+
+
+
+
 def subjects():
     subjects = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
     scores = []
