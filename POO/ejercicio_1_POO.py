@@ -53,3 +53,5 @@ libro4 = milibro("Mi primera Novela", "Novela", "Bruño", 2019)
 libro4.mislibros()
 libro5 = milibro("Gatos", "Literatura", "Listado", 2018)
 libro5.mislibros()
+
+print((libro4.año +libro5.año)/2)
