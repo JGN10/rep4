@@ -34,6 +34,10 @@ print(numero1.compara(numero2))
 numero3 = numero1.suma(numero2)
 print(numero3)
 
+# se pueden definir operaciones como la suma, resta, multiplicación, etc 
+# las funciones son __add__, __sub__, __mul__ etc... hay mchas más
+
+
 # EJERCICIO 2
 
 """
