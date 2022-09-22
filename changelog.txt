@@ -1,0 +1,6 @@
+indicar los cambios que se van haciendo en cada subida al directorio de produccion
+
+version
+- nueva funcionalidad
+- errores solucionados
+
